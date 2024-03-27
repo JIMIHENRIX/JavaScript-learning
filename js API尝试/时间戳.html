@@ -1,0 +1,110 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timestamp Example</title>
+</head>
+
+<body>
+    <button id="myButton">点击我！</button>
+    <p>点击按钮的时间戳：</p>
+    <p id="timestampDisplay"></p>
+
+    <script>
+        // JavaScript代码将放在这里
+        // 获取按钮和时间戳显示区域的引用
+        const button = document.getElementById('myButton');
+        const timestampDisplay = document.getElementById('timestampDisplay');
+
+        // 添加点击事件监听器
+        button.addEventListener('click', function () {
+            // 获取当前时间的时间戳
+            const timestamp = Date.now();
+
+            // 显示时间戳
+            timestampDisplay.textContent = timestamp;
+        });
+
+    </script>
+</body>
+
+ </html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Example</title>
+    <style>
+        .box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Dynamic DOM Manipulation</h3>
+    <div class="container">
+        <h4>Original Element</h4>
+        <div class="box" id="originalBox">Original Box</div>
+        <button onclick="addNewElement()">Add New Element</button>
+    </div>
+
+    <script>
+        // Function to add new elements dynamically
+        function addNewElement() {
+            // Creating a new paragraph element
+            const newParagraph = document.createElement('p');
+            newParagraph.textContent = 'This is a new paragraph element.';
+
+            // Cloning the original box element
+            const originalBox = document.getElementById('originalBox');
+            const clonedBox = originalBox.cloneNode(true);
+
+            // Appending the new paragraph and cloned box to the container
+            const container = document.querySelector('.container');
+            container.appendChild(newParagraph);
+            container.appendChild(clonedBox);
+        }
+    </script>
+</body>
+
+</html> --> 
+<!-- <body>
+    <h3>插入节点</h3>
+    <p>在现有 DOM 结构基础上插入新的元素节点</p>
+    <hr>
+    <button class="btn1">在任意节点前插入</button>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <script>
+        // 点击按钮，在已有 DOM 中插入新节点
+        const btn1 = document.querySelector('.btn1')
+        btn1.addEventListener('click', function () {
+
+            // 第 2 个 li 元素
+            const relative = document.querySelector('li:nth-child(2)')
+
+            // 1. 动态创建新的节点
+            const li1 = document.createElement('li')
+            li1.style.color = 'red'
+            li1.innerText = 'Web APIs'
+
+            // 复制现有的节点
+            const li2 = document.querySelectorAll('li')[0].cloneNode(true)
+            li2.style.color = 'blue'
+
+            // 2. 在 relative 节点前插入
+            document.querySelector('ul').insertBefore(li1, relative)
+            document.querySelector('ul').insertBefore(li2, relative)
+        })
+    </script>
+</body> -->
